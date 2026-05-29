@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: Update title and description with your actual name/tagline -->
+  <title>Sanket — Senior Data Analyst & Data Scientist</title>
+  <meta name="description" content="Senior Data Analyst specialising in causal inference, A/B experimentation, and ML. Open to Lead DA and Data Scientist roles." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sanket — Data Analyst & Scientist" />
+  <meta property="og:description" content="Causal inference, experimentation, and applied ML." />
+  <meta property="og:type" content="website" />
+  <!-- TODO: Add og:image once you have a profile photo hosted -->
+  <!-- <meta property="og:image" content="https://yourdomain.com/assets/images/og.png" /> -->
+
+  <!-- Favicon -->
+  <!-- TODO: Add favicon. Create a 32×32 PNG and reference it here. -->
+  <!-- <link rel="icon" type="image/png" href="assets/images/favicon.png" /> -->
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+
+      <!-- Logo — filled by JS from CONFIG.name -->
+      <a href="#hero" class="nav-logo" id="nav-logo">Sanket</a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+      </ul>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg-grain" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-content">
+          <!-- Tag line above the title -->
+          <div class="hero-tag">Available for new roles</div>
+
+          <!-- Title — filled by JS -->
+          <h1 class="hero-title">Hi, I'm Sanket —<br>Senior Data Analyst</h1>
+
+          <!-- Tagline — filled by JS -->
+          <p class="hero-desc">I turn messy data into decisions that move the needle.</p>
+
+          <!-- CTAs -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn--primary btn--lg">See my work</a>
+            <a href="#" class="btn btn--outline btn--lg hero-resume-btn" target="_blank" rel="noopener">
+              <!-- TODO: Point resume href to your PDF -->
+              Download résumé
+            </a>
+          </div>
+        </div>
+
+        <!-- Portrait — shown on desktop -->
+        <div class="hero-portrait" aria-hidden="true">
+          <!-- TODO: Replace with your actual photo -->
+          <!-- <img src="assets/images/sanket.jpg" alt="Sanket" /> -->
+          <div class="hero-portrait-placeholder">
+            <!-- TODO: Add photo as assets/images/sanket.jpg -->
+            Photo placeholder
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero-scroll-hint" aria-hidden="true">
+      scroll
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════════════════════ -->
+  <section id="about" class="section section--alt">
+    <div class="container">
+      <p class="section-label reveal">About</p>
+      <h2 class="section-title reveal">The longer version</h2>
+      <div class="divider reveal"></div>
+
+      <div class="about-grid">
+        <!-- Bio paragraphs — filled by JS from CONFIG.about -->
+        <div class="about-text reveal" id="about-text"></div>
+
+        <!-- Fact cards — filled by JS from CONFIG.facts -->
+        <div class="about-facts" id="about-facts"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       EXPERIENCE
+  ══════════════════════════════════════════════════════════ -->
+  <section id="experience" class="section">
+    <div class="container">
+      <p class="section-label reveal">Experience</p>
+      <h2 class="section-title reveal">Where I've worked</h2>
+      <div class="divider reveal"></div>
+
+      <!-- Timeline — filled by JS from CONFIG.experience -->
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       PROJECTS
+  ══════════════════════════════════════════════════════════ -->
+  <section id="projects" class="section section--alt">
+    <div class="container">
+      <div class="projects-header">
+        <div>
+          <p class="section-label reveal">Projects</p>
+          <h2 class="section-title reveal" style="margin-bottom:0">Things I've built &amp; measured</h2>
+        </div>
+        <!-- TODO: Add a link to your GitHub or a "See all" page if needed -->
+        <!-- <a href="#" class="btn btn--ghost">See all →</a> -->
+      </div>
+
+      <!-- Project cards — filled by JS from CONFIG.projects -->
+      <div class="projects-grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       SKILLS
+  ══════════════════════════════════════════════════════════ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <p class="section-label reveal">Skills</p>
+      <h2 class="section-title reveal">What I work with</h2>
+      <div class="divider reveal"></div>
+
+      <!-- Skill groups — filled by JS from CONFIG.skills -->
+      <div class="skills-grid" id="skills-grid"></div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       WRITING
+  ══════════════════════════════════════════════════════════ -->
+  <section id="writing" class="section section--alt">
+    <div class="container">
+      <div class="writing-header">
+        <div>
+          <p class="section-label reveal">Writing</p>
+          <h2 class="section-title reveal" style="margin-bottom:0">Thinking out loud</h2>
+        </div>
+        <!-- TODO: Uncomment and link once you have a full blog index page -->
+        <!-- <a href="blog/index.html" class="btn btn--ghost">All posts →</a> -->
+      </div>
+
+      <!-- Writing cards — filled by JS from CONFIG.posts -->
+      <div class="writing-grid" id="writing-grid"></div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner">
+
+        <div class="contact-info">
+          <p class="section-label">Let's talk</p>
+          <h2 class="section-title">Open to the right opportunity</h2>
+          <p class="section-subtitle" style="color:rgba(250,248,244,.6)">
+            If you're building something with data at the centre and want a thoughtful senior IC —
+            I'd love to hear what you're working on.
+          </p>
+
+          <div class="contact-links">
+            <!-- Email -->
+            <a href="#" class="contact-link-item" id="contact-email-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span><!-- filled by JS --></span>
+            </a>
+            <!-- LinkedIn -->
+            <a href="#" class="contact-link-item" id="contact-linkedin-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <!-- GitHub -->
+            <a href="#" class="contact-link-item" id="contact-github-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <form class="contact-form" id="contact-form" novalidate>
+          <!-- TODO: To make this form work, either:
+               (A) Add action="https://formspree.io/f/YOUR_ID" to this <form> element
+               (B) Use Netlify Forms: add netlify attribute to <form>
+               Then remove the JS form handler in main.js -->
+          <div class="form-group">
+            <label class="form-label" for="form-name">Name</label>
+            <input class="form-control" id="form-name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-email">Email</label>
+            <input class="form-control" id="form-email" name="email" type="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-message">Message</label>
+            <textarea class="form-control" id="form-message" name="message" rows="5" placeholder="What are you working on?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" style="align-self:flex-start">Send message</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-logo" id="footer-logo">Sanket</span>
+      <span class="footer-copy">© <span id="footer-year"></span> · Built with care, no frameworks</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#writing">Writing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Toast notification -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Main script -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

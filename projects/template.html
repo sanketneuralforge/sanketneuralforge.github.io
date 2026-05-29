@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: Update title to match your project name -->
+  <title>Project Title — Sanket</title>
+  <meta name="description" content="TODO: Add a one-sentence description of this project." />
+
+  <!-- Styles (adjust path if nesting deeper) -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
+
+  <!-- Case study page styles -->
+  <style>
+    /* ── Case study layout ── */
+    .cs-header {
+      background: var(--color-bg-alt);
+      padding-top: calc(var(--nav-height) + var(--space-16));
+      padding-bottom: var(--space-16);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .cs-back {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-8);
+      transition: color var(--duration) var(--ease-out);
+    }
+    .cs-back:hover { color: var(--color-accent); }
+    .cs-back svg { width: 16px; height: 16px; }
+
+    .cs-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      align-items: center;
+      margin-bottom: var(--space-5);
+    }
+
+    .cs-date {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+    }
+
+    .cs-read-time {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+    }
+
+    .cs-title {
+      font-family: var(--font-serif);
+      font-size: clamp(var(--text-2xl), 5vw, var(--text-5xl));
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-tight);
+      color: var(--color-text);
+      margin-bottom: var(--space-5);
+      max-width: 780px;
+    }
+
+    .cs-subtitle {
+      font-size: var(--text-xl);
+      color: var(--color-text-muted);
+      max-width: 620px;
+      line-height: var(--leading-normal);
+    }
+
+    /* ── Key metrics bar ── */
+    .cs-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1px;
+      background: var(--color-border);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-top: var(--space-10);
+    }
+
+    .cs-metric {
+      flex: 1;
+      min-width: 160px;
+      background: var(--color-surface);
+      padding: var(--space-5) var(--space-6);
+    }
+
+    .cs-metric-value {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      font-weight: var(--weight-bold);
+      color: var(--color-accent);
+      margin-bottom: var(--space-1);
+    }
+
+    .cs-metric-label {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    /* ── Body content ── */
+    .cs-body {
+      max-width: var(--max-width-text);
+      margin-inline: auto;
+      padding-block: var(--space-16);
+    }
+
+    .cs-body h2 {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      font-weight: var(--weight-bold);
+      color: var(--color-text);
+      margin-top: var(--space-12);
+      margin-bottom: var(--space-4);
+    }
+
+    .cs-body h3 {
+      font-family: var(--font-serif);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-bold);
+      color: var(--color-text);
+      margin-top: var(--space-8);
+      margin-bottom: var(--space-3);
+    }
+
+    .cs-body p {
+      color: var(--color-text-muted);
+      line-height: var(--leading-loose);
+      margin-bottom: var(--space-5);
+    }
+
+    .cs-body strong { color: var(--color-text); font-weight: var(--weight-semibold); }
+
+    .cs-body ul, .cs-body ol {
+      padding-left: var(--space-6);
+      margin-bottom: var(--space-5);
+      color: var(--color-text-muted);
+      line-height: var(--leading-loose);
+    }
+
+    .cs-body li { margin-bottom: var(--space-2); }
+
+    .cs-body pre {
+      background: var(--color-text);
+      color: var(--color-bg);
+      border-radius: var(--radius-md);
+      padding: var(--space-5) var(--space-6);
+      overflow-x: auto;
+      margin-bottom: var(--space-5);
+      font-size: var(--text-sm);
+      line-height: 1.7;
+    }
+
+    .cs-body code {
+      font-family: var(--font-mono);
+      font-size: 0.9em;
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border);
+      padding: 2px 6px;
+      border-radius: var(--radius-sm);
+    }
+
+    .cs-body pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    .cs-body blockquote {
+      border-left: 3px solid var(--color-accent);
+      padding-left: var(--space-5);
+      margin: var(--space-8) 0;
+      font-family: var(--font-serif);
+      font-size: var(--text-xl);
+      font-style: italic;
+      color: var(--color-text);
+      line-height: var(--leading-snug);
+    }
+
+    .cs-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--space-10) 0;
+    }
+
+    /* ── Callout box ── */
+    .callout {
+      background: var(--color-accent-soft);
+      border: 1px solid rgba(200,121,65,.2);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: var(--space-4) var(--space-5);
+      margin: var(--space-6) 0;
+      color: var(--color-text);
+    }
+
+    /* ── Navigation between posts ── */
+    .cs-nav {
+      border-top: 1px solid var(--color-border);
+      margin-top: var(--space-16);
+      padding-top: var(--space-8);
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    .cs-nav a {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      color: var(--color-text-muted);
+    }
+    .cs-nav a:hover { color: var(--color-accent); }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal nav -->
+  <nav id="nav" style="background:rgba(250,248,244,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--color-border);" role="navigation">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">Sanket</a>
+      <div class="nav-links" style="display:flex;">
+        <a href="../index.html#projects">← All projects</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ── Case study header ── -->
+  <header class="cs-header">
+    <div class="container">
+      <a href="../index.html#projects" class="cs-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        All projects
+      </a>
+
+      <div class="cs-meta">
+        <!-- TODO: Replace with real tags -->
+        <span class="tag">Causal Inference</span>
+        <span class="tag tag--neutral">Python</span>
+        <span class="cs-date">TODO: Add date</span>
+        <span class="cs-read-time">TODO: X min read</span>
+      </div>
+
+      <!-- TODO: Replace with your actual project title -->
+      <h1 class="cs-title">Project Title Goes Here</h1>
+      <!-- TODO: Replace with a one-sentence summary -->
+      <p class="cs-subtitle">A brief one-sentence description of what this project is and what impact it had.</p>
+
+      <!-- Key metrics — add/remove .cs-metric blocks as needed -->
+      <div class="cs-metrics">
+        <div class="cs-metric">
+          <div class="cs-metric-value">TODO</div>
+          <div class="cs-metric-label">Key metric 1</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-value">TODO</div>
+          <div class="cs-metric-label">Key metric 2</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-value">TODO</div>
+          <div class="cs-metric-label">Key metric 3</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ── Case study body ── -->
+  <main>
+    <article class="cs-body container">
+
+      <!-- ─── WRITE YOUR CASE STUDY BELOW ───
+           Use h2 for major sections, h3 for sub-sections.
+           Use <div class="callout"> for highlighted insights.
+           Use <pre><code> for code snippets.
+      ──────────────────────────────────────── -->
+
+      <h2>The problem</h2>
+      <p>TODO: Describe the business problem you were solving. Why did it matter? What was the cost of the status quo?</p>
+
+      <h2>My approach</h2>
+      <p>TODO: Walk through your methodology. What techniques did you use and why? What tradeoffs did you make?</p>
+
+      <div class="callout">
+        <strong>Key insight:</strong> TODO — Add the most important thing you learned or discovered.
+      </div>
+
+      <h2>Implementation</h2>
+      <p>TODO: Describe how you built/ran this. Tools, data sources, key design decisions.</p>
+
+      <pre><code># TODO: Add a representative code snippet if relevant
+import pandas as pd
+# ...
+</code></pre>
+
+      <h2>Results</h2>
+      <p>TODO: What happened? Be specific about the impact — numbers, percentages, decisions enabled.</p>
+
+      <h2>What I learned</h2>
+      <p>TODO: Honest reflection — what worked, what you'd do differently, what surprised you.</p>
+
+      <!-- Navigation to other projects -->
+      <nav class="cs-nav" aria-label="Project navigation">
+        <a href="#">← Previous project</a>
+        <a href="../index.html#projects">All projects</a>
+        <a href="#">Next project →</a>
+      </nav>
+
+    </article>
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-logo">Sanket</span>
+      <span class="footer-copy">© <span class="footer-year"></span></span>
+      <nav class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.footer-year').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: Update title and description for this post -->
+  <title>Post Title — Sanket</title>
+  <meta name="description" content="TODO: Add a one-sentence description of this blog post." />
+
+  <link rel="stylesheet" href="../assets/css/main.css" />
+
+  <style>
+    /* ── Blog post layout ── */
+    .post-header {
+      background: var(--color-bg-alt);
+      padding-top: calc(var(--nav-height) + var(--space-16));
+      padding-bottom: var(--space-12);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .post-back {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-8);
+      transition: color var(--duration) var(--ease-out);
+    }
+    .post-back:hover { color: var(--color-accent); }
+    .post-back svg { width: 16px; height: 16px; }
+
+    .post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      align-items: center;
+      margin-bottom: var(--space-5);
+    }
+
+    .post-date {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+    }
+
+    .post-read-time {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+    }
+
+    .post-title {
+      font-family: var(--font-serif);
+      font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+      font-weight: var(--weight-bold);
+      line-height: var(--leading-tight);
+      color: var(--color-text);
+      margin-bottom: var(--space-5);
+      max-width: 760px;
+    }
+
+    .post-lead {
+      font-size: var(--text-xl);
+      color: var(--color-text-muted);
+      max-width: 620px;
+      line-height: var(--leading-normal);
+      font-style: italic;
+    }
+
+    /* ── Progress bar ── */
+    #read-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--color-accent);
+      width: 0%;
+      z-index: 200;
+      transition: width 0.1s linear;
+    }
+
+    /* ── Body ── */
+    .post-body {
+      max-width: var(--max-width-text);
+      margin-inline: auto;
+      padding-block: var(--space-16);
+    }
+
+    .post-body h2 {
+      font-family: var(--font-serif);
+      font-size: var(--text-2xl);
+      font-weight: var(--weight-bold);
+      color: var(--color-text);
+      margin-top: var(--space-12);
+      margin-bottom: var(--space-4);
+    }
+
+    .post-body h3 {
+      font-family: var(--font-serif);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-bold);
+      color: var(--color-text);
+      margin-top: var(--space-8);
+      margin-bottom: var(--space-3);
+    }
+
+    .post-body p {
+      color: var(--color-text-muted);
+      line-height: var(--leading-loose);
+      margin-bottom: var(--space-5);
+    }
+
+    .post-body strong { color: var(--color-text); font-weight: var(--weight-semibold); }
+
+    .post-body a {
+      color: var(--color-accent);
+      text-decoration: underline;
+      text-decoration-color: rgba(200,121,65,.3);
+      text-underline-offset: 3px;
+    }
+    .post-body a:hover { text-decoration-color: var(--color-accent); }
+
+    .post-body ul, .post-body ol {
+      padding-left: var(--space-6);
+      margin-bottom: var(--space-5);
+      color: var(--color-text-muted);
+      line-height: var(--leading-loose);
+    }
+
+    .post-body li { margin-bottom: var(--space-2); }
+
+    .post-body pre {
+      background: var(--color-text);
+      color: var(--color-bg);
+      border-radius: var(--radius-md);
+      padding: var(--space-5) var(--space-6);
+      overflow-x: auto;
+      margin-bottom: var(--space-5);
+      font-size: var(--text-sm);
+      line-height: 1.7;
+    }
+
+    .post-body code {
+      font-family: var(--font-mono);
+      font-size: 0.9em;
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border);
+      padding: 2px 6px;
+      border-radius: var(--radius-sm);
+    }
+
+    .post-body pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: inherit;
+      color: inherit;
+    }
+
+    .post-body blockquote {
+      border-left: 3px solid var(--color-accent);
+      padding-left: var(--space-5);
+      margin: var(--space-8) 0;
+      font-family: var(--font-serif);
+      font-size: var(--text-xl);
+      font-style: italic;
+      color: var(--color-text);
+      line-height: var(--leading-snug);
+    }
+
+    .post-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--space-10) 0;
+    }
+
+    .post-body img {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      margin: var(--space-6) 0;
+      width: 100%;
+    }
+
+    .post-body figcaption {
+      font-size: var(--text-sm);
+      color: var(--color-text-light);
+      text-align: center;
+      margin-top: calc(-1 * var(--space-4));
+      margin-bottom: var(--space-6);
+    }
+
+    /* ── Callout box ── */
+    .callout {
+      background: var(--color-accent-soft);
+      border: 1px solid rgba(200,121,65,.2);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: var(--space-4) var(--space-5);
+      margin: var(--space-6) 0;
+      color: var(--color-text);
+    }
+
+    /* ── Post footer ── */
+    .post-footer {
+      border-top: 1px solid var(--color-border);
+      margin-top: var(--space-16);
+      padding-top: var(--space-8);
+    }
+
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-8);
+    }
+
+    .post-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    .post-nav a {
+      font-size: var(--text-sm);
+      font-weight: var(--weight-medium);
+      color: var(--color-text-muted);
+      text-decoration: none;
+    }
+    .post-nav a:hover { color: var(--color-accent); }
+  </style>
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div id="read-progress" aria-hidden="true"></div>
+
+  <!-- Minimal nav -->
+  <nav id="nav" style="background:rgba(250,248,244,.95);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--color-border);" role="navigation">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">Sanket</a>
+      <div class="nav-links" style="display:flex;">
+        <a href="../index.html#writing">← All writing</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ── Post header ── -->
+  <header class="post-header">
+    <div class="container">
+      <a href="../index.html#writing" class="post-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        All writing
+      </a>
+
+      <div class="post-meta">
+        <!-- TODO: Replace with real tags -->
+        <span class="tag">Experimentation</span>
+        <!-- TODO: Update date and read time -->
+        <span class="post-date">TODO: Month Day, Year</span>
+        <span class="post-read-time">TODO: X min read</span>
+      </div>
+
+      <!-- TODO: Replace with your actual post title -->
+      <h1 class="post-title">Post Title Goes Here</h1>
+      <!-- TODO: Replace with your lead paragraph / TL;DR -->
+      <p class="post-lead">A brief, compelling one or two-sentence summary of the post's main argument.</p>
+    </div>
+  </header>
+
+
+  <!-- ── Post body ── -->
+  <main>
+    <article class="post-body container">
+
+      <!-- ─── WRITE YOUR POST BELOW ───
+           Use h2 for sections, h3 for sub-sections.
+           Use <div class="callout"> for highlighted insights.
+           Use <blockquote> for pull quotes.
+           Use <pre><code> for code.
+           Use <figure><img><figcaption> for images.
+      ──────────────────────────────────── -->
+
+      <p>TODO: Open with a strong first paragraph that sets the scene and makes the reader want to continue.</p>
+
+      <h2>Section heading</h2>
+      <p>TODO: Main content here.</p>
+
+      <div class="callout">
+        <strong>Insight:</strong> TODO — Add a key takeaway you want to highlight.
+      </div>
+
+      <h2>Another section</h2>
+      <p>TODO: More content.</p>
+
+      <blockquote>TODO: A quote or key claim worth pulling out.</blockquote>
+
+      <h2>Conclusion</h2>
+      <p>TODO: Wrap up. What should the reader take away? What should they do next?</p>
+
+      <!-- Post footer -->
+      <footer class="post-footer">
+        <div class="post-tags">
+          <!-- TODO: Replace with real tags -->
+          <span class="tag">Experimentation</span>
+          <span class="tag">Stats</span>
+        </div>
+        <nav class="post-nav" aria-label="Post navigation">
+          <a href="#">← Previous post</a>
+          <a href="../index.html#writing">All writing</a>
+          <a href="#">Next post →</a>
+        </nav>
+      </footer>
+
+    </article>
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-logo">Sanket</span>
+      <span class="footer-copy">© <span class="footer-year"></span></span>
+      <nav class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.footer-year').forEach(el => {
+      el.textContent = new Date().getFullYear();
+    });
+
+    /* Reading progress bar */
+    const bar = document.getElementById('read-progress');
+    const article = document.querySelector('.post-body');
+    window.addEventListener('scroll', () => {
+      const { top, height } = article.getBoundingClientRect();
+      const windowH = window.innerHeight;
+      const scrolled = Math.max(0, Math.min(1, (-top) / (height - windowH)));
+      bar.style.width = (scrolled * 100) + '%';
+    }, { passive: true });
+  </script>
+</body>
+</html>
