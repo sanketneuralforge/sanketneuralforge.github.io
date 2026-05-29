@@ -10,20 +10,21 @@ const CONFIG = {
 
   /* ── Personal info ── */
   name: "Sanket",
-  role: "Analytics Leader & Data Scientist",
+  brand: "SanketNeuralForge",
+  role: "Analytics Leader and Data Scientist",
   location: "Bengaluru, India",
   email: "sanketsrp176.sp@gmail.com",
   linkedin: "https://www.linkedin.com/in/sanket-panchalwar/", /* TODO: confirm handle */
   github:   "https://github.com/sanketneuralforge",
   resume:   "assets/resume/Sanket_Panchalwar_Resume.pdf",
 
-  tagline: "Analytics leader who turns ambiguous business problems into financial impact — across marketplace, gaming, and mobility.",
+  tagline: "Analytics leader turning ambiguous business problems into measurable impact, across marketplace, gaming, and mobility.",
 
   about: [
-    "I'm a <strong>Senior Data Analyst (Care) at Deliveroo, acquired by DoorDash</strong>, where I own end-to-end analytics strategy for a high-impact care vertical. My work ranges from designing experiment frameworks and building financial models to presenting trade-off analyses directly to leadership — numbers that have shaped £M-level decisions.",
-    "Six years in, my edge is the combination of <strong>deep statistical craft and product intuition</strong>. I've shipped measurement systems across food delivery, real-money gaming, and ride-hailing — each domain reinforcing that the right framing of a question is worth more than the fanciest model.",
-    "I'm currently pursuing an <strong>MTech in AI/ML at BITS Pilani (2025–2027)</strong> — deliberately revisiting fundamentals while working full-time, because I want a foundation that holds up when the tooling landscape shifts again.",
-    "I'm actively seeking <strong>Lead Data Analyst or Data Scientist roles</strong> at product companies where data is a first-class citizen — not a reporting function."
+    "I'm a <strong>Senior Data Analyst (Care) at Deliveroo, acquired by DoorDash</strong>, where I own end-to-end analytics strategy for a high-impact care vertical. My work spans designing experiment frameworks, building financial models, and presenting trade-off analyses directly to leadership.",
+    "Six years in, my edge is the combination of <strong>deep statistical craft and product intuition</strong>. I've shipped measurement systems across food delivery, real-money gaming, and ride-hailing, and each domain has reinforced that the right framing of a question is worth more than the fanciest model.",
+    "I'm currently pursuing an <strong>MTech in AI/ML at BITS Pilani (2025–2027)</strong>, deliberately revisiting fundamentals while working full-time, because I want a foundation that holds up when the tooling landscape shifts again.",
+    "I'm actively seeking <strong>Lead Data Analyst or Data Scientist roles</strong> at product companies where data is a first-class citizen, not a reporting function."
   ],
 
   /* ── Snapshot cards on the right of the About section ── */
@@ -41,10 +42,10 @@ const CONFIG = {
       role:    "Senior Data Analyst, Care",
       company: "Deliveroo (acquired by DoorDash, 2025) · Bengaluru",
       bullets: [
-        "Own end-to-end analytics strategy for the Care vertical — defining KPIs, designing experiments, building financial models, and presenting trade-off analyses directly to leadership.",
+        "Own end-to-end analytics strategy for the Care vertical, defining KPIs, designing experiments, building financial models, and presenting trade-off analyses directly to leadership.",
         "Led measurement for multiple LLM-powered product initiatives in the support stack, designing evaluation frameworks that translated model behaviour into business impact and shaped go/no-go decisions.",
         "Defined and standardised experimentation platform metrics across the Care organisation, giving all lines of business a shared measurement language and faster, more consistent experiment cycles.",
-        "Serve as the primary analytics partner to Product and Engineering — translating ambiguous operational problems into structured cost-sizing analyses and actionable recommendations.",
+        "Serve as the primary analytics partner to Product and Engineering, translating ambiguous operational problems into structured cost-sizing analyses and actionable recommendations.",
         "Evaluated and proposed simplifications to care policies, designing evidence-based thresholds and tiered structures to balance customer satisfaction against cost control.",
       ]
     },
@@ -53,11 +54,11 @@ const CONFIG = {
       role:    "Associate Data Scientist, Product",
       company: "Junglee Games · Bengaluru",
       bullets: [
-        "Built a player prediction framework using early in-session behaviour signals to identify high-value users before churn — outputs fed directly into targeted retention campaigns.",
+        "Built a player prediction framework using early in-session behaviour signals to identify high-value users before churn, with outputs feeding directly into targeted retention campaigns.",
         "Developed an IPL Auto Team Suggester using historical performance data to reduce decision friction for users and lift contest participation.",
         "Analysed skill vs. chance dynamics in casual games (Ludo, Teen Patti) to provide evidence-based recommendations for game design and product strategy.",
         "Designed and implemented structured event validation pipelines that caught critical clickstream quality issues at scale, improving data reliability for downstream analysis.",
-        "Led experiment analysis across new product feature launches — owned measurement design, statistical testing, and automated KPI reporting for stakeholder visibility.",
+        "Led experiment analysis across new product feature launches, owning measurement design, statistical testing, and automated KPI reporting for stakeholder visibility.",
       ]
     },
     {
@@ -74,7 +75,7 @@ const CONFIG = {
       role:    "Decision Scientist",
       company: "Bounce Bikeshare · Bengaluru",
       bullets: [
-        "Analysed spatial demand patterns to identify optimal bike redistribution clusters — translating usage data into operational recommendations that improved asset utilisation.",
+        "Analysed spatial demand patterns to identify optimal bike redistribution clusters, translating usage data into operational recommendations that improved asset utilisation.",
         "Built cross-platform reporting solutions to give operations and leadership consistent visibility into fleet health and key performance metrics.",
       ]
     },
@@ -94,9 +95,9 @@ const CONFIG = {
   ────────────────────────────────────────────────────────── */
   projects: [
     {
-      title:     "End-to-End Policy Experiment — Customer Care",
+      title:     "End-to-End Policy Experiment: Customer Care",
       tags:      ["Experiment Design", "Causal Inference", "Financial Modelling"],
-      desc:      "Owned the full analytics lifecycle for a high-stakes care policy change — from defining the hypothesis and experiment framework to building financial trade-off models and presenting to leadership. The goal was to understand the true cost and quality impact of changing how customer claims were validated.",
+      desc:      "Owned the full analytics lifecycle for a high-stakes care policy change, from defining the hypothesis and experiment framework to building financial trade-off models and presenting to leadership. The goal was to understand the true cost and quality impact of changing how customer claims were validated.",
       metric:    "Leadership decision",
       metricSub: "enabled by rigorous experiment + impact sizing",
       caseStudy: "",
@@ -105,7 +106,7 @@ const CONFIG = {
     {
       title:     "LLM-Powered Compensation Intelligence",
       tags:      ["LLM", "Measurement", "Product Analytics"],
-      desc:      "Measured the impact of replacing a blunt flat-rate compensation system with an LLM-estimated value model. Designed the measurement framework, tracked cost efficiency and customer satisfaction signals in parallel, and synthesised findings into a go/no-go recommendation for product leadership.",
+      desc:      "Measured the impact of replacing a flat-rate compensation system with an LLM-estimated value model. Designed the measurement framework, tracked cost efficiency and customer satisfaction signals in parallel, and synthesised findings into a go/no-go recommendation for product leadership.",
       metric:    "Go decision",
       metricSub: "driven by multi-signal impact analysis",
       caseStudy: "",
@@ -123,7 +124,7 @@ const CONFIG = {
     {
       title:     "Experimentation Platform Standardisation",
       tags:      ["Experiment Strategy", "KPI Design", "Analytics Infra"],
-      desc:      "Identified inconsistency in how different Care teams were defining and measuring experiment outcomes. Drove the design of a standardised metric framework — shared guardrail metrics, primary KPI definitions, and decision rules — adopted across all lines of business.",
+      desc:      "Identified inconsistency in how different Care teams were defining and measuring experiment outcomes. Drove the design of a standardised metric framework with shared guardrail metrics, primary KPI definitions, and decision rules, adopted across all lines of business.",
       metric:    "Org-wide adoption",
       metricSub: "consistent experiment decisions across all teams",
       caseStudy: "",
@@ -132,7 +133,7 @@ const CONFIG = {
     {
       title:     "High-Value Player Prediction at Scale",
       tags:      ["ML", "Classification", "Gaming Analytics"],
-      desc:      "Built a prediction framework that used early in-session behaviour signals to identify players likely to become high-value. The model output fed directly into targeted engagement campaigns — the problem was getting signal early enough to act before churn.",
+      desc:      "Built a prediction framework that used early in-session behaviour signals to identify players likely to become high-value. The model output fed directly into targeted engagement campaigns, with the core challenge being getting a reliable signal early enough to act before churn.",
       metric:    "Retention uplift",
       metricSub: "from targeted engagement on predicted HVPs",
       caseStudy: "",
@@ -142,7 +143,7 @@ const CONFIG = {
       title:     "Subscription Segmentation & Demand Forecasting",
       tags:      ["RFM Analysis", "Forecasting", "PySpark"],
       desc:      "Segmented a large ride-hailing subscriber base using RFM analysis and geo-temporal profiling to surface high-potential cohorts for campaigns. Paired with a demand forecasting pipeline built on Spark + Airflow to give ops teams advance visibility into subscription behaviour.",
-      metric:    "Manual → automated",
+      metric:    "Manual to automated",
       metricSub: "KPI tracking replaced with self-serve pipelines",
       caseStudy: "",
       github:    "",
@@ -173,7 +174,7 @@ const CONFIG = {
     },
     {
       group: "Currently Studying",
-      items: ["MTech AI/ML — BITS Pilani", "Generative AI with LLMs (AWS/Coursera)", "Mathematics for ML (DeepLearning.ai)", "Spark & PySpark (Udemy)"]
+      items: ["MTech AI/ML at BITS Pilani", "Generative AI with LLMs (AWS/Coursera)", "Mathematics for ML (DeepLearning.ai)", "Spark & PySpark (Udemy)"]
     },
   ],
 
@@ -233,7 +234,7 @@ const CONFIG = {
       title:    "Why Most A/B Tests at Scale Fail Silently",
       date:     "2025-04-12",
       tags:     ["Experimentation", "Stats"],
-      excerpt:  "Network effects, novelty bias, and survivor-selected metrics are quietly ruining your p-values — and most teams have no idea.",
+      excerpt:  "Network effects, novelty bias, and survivor-selected metrics are quietly ruining your p-values. Most teams have no idea.",
       readTime: "7 min",
       slug:     "", /* TODO: create blog/why-ab-tests-fail.html */
     },
@@ -246,10 +247,10 @@ const CONFIG = {
       slug:     "", /* TODO */
     },
     {
-      title:    "How I'm Using LLMs to Accelerate Analysis — Without the Hype",
+      title:    "How I'm Using LLMs to Accelerate Analysis, Without the Hype",
       date:     "2024-12-05",
       tags:     ["LLM", "Workflow"],
-      excerpt:  "Not code generation — structured reasoning scaffolds, eval frameworks, and an honest take on where the tooling is genuinely ahead of the workflows.",
+      excerpt:  "Not code generation. Structured reasoning scaffolds, eval frameworks, and an honest take on where the tooling is genuinely ahead of the workflows.",
       readTime: "6 min",
       slug:     "", /* TODO */
     },
@@ -265,7 +266,7 @@ const CONFIG = {
 /* ── Hero ── */
 function renderHero() {
   document.querySelector('.hero-title').innerHTML =
-    `Hi, I'm <em>${CONFIG.name}</em> —<br>${CONFIG.role}`;
+    `Hi, I'm ${CONFIG.name}<br><em>${CONFIG.role}</em>`;
   document.querySelector('.hero-desc').textContent = CONFIG.tagline;
 }
 

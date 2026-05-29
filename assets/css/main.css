@@ -120,26 +120,30 @@ ul { list-style: none; }
 .nav-logo {
   display: flex;
   align-items: center;
-  font-family: var(--font-serif);
-  font-size: var(--text-xl);
-  font-weight: var(--weight-bold);
-  color: var(--color-text);
-  letter-spacing: -0.01em;
+  flex-shrink: 0;
+  text-decoration: none;
 }
-.nav-logo:hover { color: var(--color-accent); }
-
 .nav-logo-img {
-  height: 40px;
+  height: 38px;
   width: auto;
-  display: block;
+  display: inline-block;
   border-radius: var(--radius-sm);
+  object-fit: contain;
 }
 
+.footer-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
 .footer-logo-img {
-  height: 48px;
+  height: 44px;
   width: auto;
-  display: block;
+  display: inline-block;
   border-radius: var(--radius-sm);
+  object-fit: contain;
+  /* logo has dark bg — light ring makes it readable on dark footer */
+  box-shadow: 0 0 0 2px rgba(255,255,255,.12);
 }
 
 .nav-links {
@@ -643,12 +647,7 @@ footer {
   gap: var(--space-4);
 }
 
-.footer-logo {
-  font-family: var(--font-serif);
-  font-size: var(--text-base);
-  font-weight: var(--weight-bold);
-  color: rgba(250,248,244,.7);
-}
+/* .footer-logo defined above with logo image styles */
 
 .footer-copy {
   font-size: var(--text-sm);
