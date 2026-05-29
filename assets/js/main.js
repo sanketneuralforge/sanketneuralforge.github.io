@@ -411,8 +411,7 @@ function renderContact() {
   document.getElementById('contact-email-link').textContent = CONFIG.email;
   document.getElementById('contact-linkedin-link').href = CONFIG.linkedin;
   document.getElementById('contact-github-link').href = CONFIG.github;
-  document.getElementById('footer-logo').textContent = CONFIG.name;
-  document.getElementById('nav-logo').textContent = CONFIG.name;
+  /* Logo is now an image — no text override needed */
   document.querySelectorAll('.hero-resume-btn').forEach(el => {
     el.href = CONFIG.resume;
   });
