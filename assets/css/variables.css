@@ -63,7 +63,7 @@
   /* ── Layout ── */
   --max-width:       1120px;
   --max-width-text:  680px;
-  --nav-height:      76px;
+  --nav-height:      130px;
   --section-padding: var(--space-24);
 
   /* ── Radius ── */
