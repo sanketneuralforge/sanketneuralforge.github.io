@@ -41,11 +41,11 @@ const CONFIG = {
       role:    "Senior Data Analyst, Care",
       company: "Deliveroo (acquired by DoorDash, 2025) · Bengaluru",
       bullets: [
-        "Owned end-to-end analytics for a high-impact Care policy change (removal of photo evidence in Missing Item claims) — designed the experiment framework, built financial impact models, and presented trade-off analysis to leadership, projecting +4pp B10 incidence, +1.2pp CSAT uplift, and £2.9M annual gross compensation impact.",
-        "Led measurement for replacing flat-rate compensation with LLM-estimated item values, quantifying £2.1M annual GTV uplift, 10.2% reduction in support contacts, and 2.88× ROI on compensation spend — directly influencing the go/no-go decision.",
-        "Drove analytics for LLM-based validation rules preventing illogical claim combinations, sizing £283K annual cost savings and 1.68ppt claim rate reduction without CSAT degradation.",
-        "Defined and standardised key experimentation platform metrics across the Care organisation, enabling consistent measurement, improved decision clarity, and faster experiment cycles across all lines of business.",
-        "Served as primary analytics partner to Product and Engineering — delivering structured cost-sizing analyses and financial trade-off frameworks that informed roadmap prioritisation decisions.",
+        "Own end-to-end analytics strategy for the Care vertical — defining KPIs, designing experiments, building financial models, and presenting trade-off analyses directly to leadership.",
+        "Led measurement for multiple LLM-powered product initiatives in the support stack, designing evaluation frameworks that translated model behaviour into business impact and shaped go/no-go decisions.",
+        "Defined and standardised experimentation platform metrics across the Care organisation, giving all lines of business a shared measurement language and faster, more consistent experiment cycles.",
+        "Serve as the primary analytics partner to Product and Engineering — translating ambiguous operational problems into structured cost-sizing analyses and actionable recommendations.",
+        "Evaluated and proposed simplifications to care policies, designing evidence-based thresholds and tiered structures to balance customer satisfaction against cost control.",
       ]
     },
     {
@@ -53,11 +53,11 @@ const CONFIG = {
       role:    "Associate Data Scientist, Product",
       company: "Junglee Games · Bengaluru",
       bullets: [
-        "Built an early-behaviour-based high-value player prediction framework to support targeted engagement strategies, improving retention by 3%.",
-        "Developed an IPL Auto Team Suggester using historical performance data to streamline user decision-making and improve contest participation.",
+        "Built a player prediction framework using early in-session behaviour signals to identify high-value users before churn — outputs fed directly into targeted retention campaigns.",
+        "Developed an IPL Auto Team Suggester using historical performance data to reduce decision friction for users and lift contest participation.",
         "Analysed skill vs. chance dynamics in casual games (Ludo, Teen Patti) to provide evidence-based recommendations for game design and product strategy.",
-        "Implemented structured event validation through data modelling and ETL pipelines, reducing critical clickstream issues by 20% and improving data reliability across large-scale user sessions.",
-        "Led experiment analysis for new product features, delivering 10% lift in conversion and 5% reduction in churn, while automating KPI reporting to improve stakeholder visibility.",
+        "Designed and implemented structured event validation pipelines that caught critical clickstream quality issues at scale, improving data reliability for downstream analysis.",
+        "Led experiment analysis across new product feature launches — owned measurement design, statistical testing, and automated KPI reporting for stakeholder visibility.",
       ]
     },
     {
@@ -65,8 +65,8 @@ const CONFIG = {
       role:    "Senior Data Analyst",
       company: "Rapido · Bengaluru",
       bullets: [
-        "Drove customer engagement optimisation by identifying high-potential subscription segments using RFM analysis and geo-temporal rider profiling, enabling targeted push and in-app campaigns.",
-        "Delivered subscription demand forecasts and built automated KPI tracking pipelines using Spark and Airflow to improve reporting efficiency and operational visibility.",
+        "Segmented the subscriber base using RFM analysis and geo-temporal rider profiling to surface high-potential cohorts for targeted push and in-app engagement campaigns.",
+        "Built subscription demand forecasting models and automated KPI tracking pipelines using Spark and Airflow, replacing manual reporting with self-serve operational visibility.",
       ]
     },
     {
@@ -74,8 +74,8 @@ const CONFIG = {
       role:    "Decision Scientist",
       company: "Bounce Bikeshare · Bengaluru",
       bullets: [
-        "Analysed demand patterns to identify optimal bike redistribution clusters, improving operational efficiency and asset utilisation.",
-        "Developed cross-platform data reporting solutions to enhance visibility into key operational metrics and support strategic decision-making.",
+        "Analysed spatial demand patterns to identify optimal bike redistribution clusters — translating usage data into operational recommendations that improved asset utilisation.",
+        "Built cross-platform reporting solutions to give operations and leadership consistent visibility into fleet health and key performance metrics.",
       ]
     },
     {
@@ -83,7 +83,7 @@ const CONFIG = {
       role:    "Analyst",
       company: "Melayer Software Solutions · Pune",
       bullets: [
-        "Analysed website traffic and user acquisition metrics using Google Analytics to inform marketing performance decisions.",
+        "Analysed web traffic and user acquisition funnel data using Google Analytics to surface patterns that informed marketing channel decisions.",
       ]
     },
   ],
