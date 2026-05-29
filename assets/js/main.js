@@ -10,179 +10,202 @@ const CONFIG = {
 
   /* ── Personal info ── */
   name: "Sanket",
-  role: "Senior Data Analyst & Aspiring Data Scientist",
+  role: "Analytics Leader & Data Scientist",
   location: "Bengaluru, India",
-  email: "sanketsrp176.code@gmail.com",
-  /* TODO: Add your actual social links */
-  linkedin: "https://linkedin.com/in/your-linkedin-handle",
+  email: "sanketsrp176.sp@gmail.com",
+  linkedin: "https://www.linkedin.com/in/sanket-panchalwar/", /* TODO: confirm handle */
   github:   "https://github.com/sanketneuralforge",
-  resume:   "#", /* TODO: Link to your hosted resume PDF */
+  resume:   "assets/resume/Sanket_Panchalwar_Resume.pdf",
 
-  tagline: "I turn messy data into decisions that move the needle.",
+  tagline: "Analytics leader who turns ambiguous business problems into financial impact — across marketplace, gaming, and mobility.",
 
   about: [
-    "I'm a <strong>Senior Data Analyst in Care Analytics at Deliveroo/DoorDash</strong>, where I design experiments, build causal models, and help operations teams make evidence-based decisions. Six years in, I still find the moment a metric shifts in a surprising direction genuinely exciting.",
-    "My work sits at the intersection of <strong>statistical rigour and product intuition</strong>. I've worked across marketplace, gaming, and mobility analytics — each domain teaching me that the right framing of a question is usually worth more than the fanciest model.",
-    "I'm currently pursuing an <strong>MTech in AI/ML at BITS Pilani (2025–2027)</strong> — deliberately going back to fundamentals while working full-time, because I want to build a foundation that holds up when the landscape shifts again.",
-    "Right now I'm actively looking for <strong>Lead Data Analyst or Data Scientist roles</strong> at product companies where data is a first-class citizen, not a reporting function."
+    "I'm a <strong>Senior Data Analyst (Care) at Deliveroo, acquired by DoorDash</strong>, where I own end-to-end analytics strategy for a high-impact care vertical. My work ranges from designing experiment frameworks and building financial models to presenting trade-off analyses directly to leadership — numbers that have shaped £M-level decisions.",
+    "Six years in, my edge is the combination of <strong>deep statistical craft and product intuition</strong>. I've shipped measurement systems across food delivery, real-money gaming, and ride-hailing — each domain reinforcing that the right framing of a question is worth more than the fanciest model.",
+    "I'm currently pursuing an <strong>MTech in AI/ML at BITS Pilani (2025–2027)</strong> — deliberately revisiting fundamentals while working full-time, because I want a foundation that holds up when the tooling landscape shifts again.",
+    "I'm actively seeking <strong>Lead Data Analyst or Data Scientist roles</strong> at product companies where data is a first-class citizen — not a reporting function."
   ],
 
-  /* ── Snapshot cards shown on the right of the About section ── */
+  /* ── Snapshot cards on the right of the About section ── */
   facts: [
-    { label: "Current role",    value: "Senior Data Analyst",      sub: "Deliveroo / DoorDash · Bengaluru" },
-    { label: "Education",       value: "MTech AI/ML",              sub: "BITS Pilani · 2025–2027" },
-    { label: "Experience",      value: "6+ years",                 sub: "Marketplace · Gaming · Mobility" },
-    { label: "Open to",         value: "Lead DA / Data Scientist", sub: "Product companies · Full-time" },
+    { label: "Current role",  value: "Senior Data Analyst",      sub: "Deliveroo (DoorDash) · Bengaluru" },
+    { label: "Education",     value: "MTech AI/ML",              sub: "BITS Pilani · 2025–2027" },
+    { label: "Experience",    value: "6+ years",                 sub: "Marketplace · Gaming · Mobility" },
+    { label: "Open to",       value: "Lead DA / Data Scientist", sub: "Product companies · Full-time" },
   ],
 
   /* ── Work experience ── */
   experience: [
     {
-      date:    "2023 – Present",
-      role:    "Senior Data Analyst, Care Analytics",
-      company: "Deliveroo / DoorDash · Bengaluru",
+      date:    "June 2024 – Present",
+      role:    "Senior Data Analyst, Care",
+      company: "Deliveroo (acquired by DoorDash, 2025) · Bengaluru",
       bullets: [
-        "Own analytics for the Care & Support vertical — tracking defect rates, resolution times, and agent productivity across 3+ markets.",
-        "Designed and analysed A/B experiments on IVR flows that reduced average handle time by ~12% with no CSAT regression.",
-        "Built a DiD framework for estimating causal impact of policy changes, replacing ad-hoc before/after comparisons across the team.",
-        /* TODO: Add more bullets */
+        "Owned end-to-end analytics for a high-impact Care policy change (removal of photo evidence in Missing Item claims) — designed the experiment framework, built financial impact models, and presented trade-off analysis to leadership, projecting +4pp B10 incidence, +1.2pp CSAT uplift, and £2.9M annual gross compensation impact.",
+        "Led measurement for replacing flat-rate compensation with LLM-estimated item values, quantifying £2.1M annual GTV uplift, 10.2% reduction in support contacts, and 2.88× ROI on compensation spend — directly influencing the go/no-go decision.",
+        "Drove analytics for LLM-based validation rules preventing illogical claim combinations, sizing £283K annual cost savings and 1.68ppt claim rate reduction without CSAT degradation.",
+        "Defined and standardised key experimentation platform metrics across the Care organisation, enabling consistent measurement, improved decision clarity, and faster experiment cycles across all lines of business.",
+        "Served as primary analytics partner to Product and Engineering — delivering structured cost-sizing analyses and financial trade-off frameworks that informed roadmap prioritisation decisions.",
       ]
     },
     {
-      date:    "2021 – 2023",
-      role:    "Data Analyst",
-      /* TODO: Update company name if different */
-      company: "Previous Company · Location",
+      date:    "Aug 2022 – May 2024",
+      role:    "Associate Data Scientist, Product",
+      company: "Junglee Games · Bengaluru",
       bullets: [
-        "Led analytics for the core marketplace funnel — acquisition, activation, retention.",
-        "Introduced RDD-based evaluation for geo-targeted promotions, surfacing a ~8% over-attribution in prior lift estimates.",
-        /* TODO: Add more bullets */
+        "Built an early-behaviour-based high-value player prediction framework to support targeted engagement strategies, improving retention by 3%.",
+        "Developed an IPL Auto Team Suggester using historical performance data to streamline user decision-making and improve contest participation.",
+        "Analysed skill vs. chance dynamics in casual games (Ludo, Teen Patti) to provide evidence-based recommendations for game design and product strategy.",
+        "Implemented structured event validation through data modelling and ETL pipelines, reducing critical clickstream issues by 20% and improving data reliability across large-scale user sessions.",
+        "Led experiment analysis for new product features, delivering 10% lift in conversion and 5% reduction in churn, while automating KPI reporting to improve stakeholder visibility.",
       ]
     },
     {
-      date:    "2019 – 2021",
-      role:    "Junior Data Analyst",
-      /* TODO: Update company name */
-      company: "Earlier Company · Location",
+      date:    "Jan 2021 – Aug 2022",
+      role:    "Senior Data Analyst",
+      company: "Rapido · Bengaluru",
       bullets: [
-        "Built player lifetime value models for a mid-core mobile game, informing UA budget allocation.",
-        /* TODO: Add more bullets */
+        "Drove customer engagement optimisation by identifying high-potential subscription segments using RFM analysis and geo-temporal rider profiling, enabling targeted push and in-app campaigns.",
+        "Delivered subscription demand forecasts and built automated KPI tracking pipelines using Spark and Airflow to improve reporting efficiency and operational visibility.",
+      ]
+    },
+    {
+      date:    "Nov 2019 – Jan 2021",
+      role:    "Decision Scientist",
+      company: "Bounce Bikeshare · Bengaluru",
+      bullets: [
+        "Analysed demand patterns to identify optimal bike redistribution clusters, improving operational efficiency and asset utilisation.",
+        "Developed cross-platform data reporting solutions to enhance visibility into key operational metrics and support strategic decision-making.",
+      ]
+    },
+    {
+      date:    "May 2018 – Oct 2019",
+      role:    "Analyst",
+      company: "Melayer Software Solutions · Pune",
+      bullets: [
+        "Analysed website traffic and user acquisition metrics using Google Analytics to inform marketing performance decisions.",
       ]
     },
   ],
 
   /* ── Projects ──────────────────────────────────────────────
      Each project renders a card on the home page.
-     Set `caseStudy` to the relative path of the case study
-     HTML if you want a "Read more" link.
+     Set `caseStudy` to the relative path if you write one up.
   ────────────────────────────────────────────────────────── */
   projects: [
     {
-      title:     "Causal Impact Framework for Policy Changes",
-      tags:      ["Causal Inference", "DiD", "Python"],
-      desc:      "Replaced ad-hoc before/after analyses across the Care team with a reproducible Difference-in-Differences pipeline, estimating treatment effects with proper uncertainty quantification.",
-      metric:    "↓18% estimation error",
-      metricSub: "vs. naive before/after",
-      caseStudy: "projects/causal-impact.html",
-      github:    "", /* TODO: Add GitHub link if public */
+      title:     "Care Policy Change — Missing Item Claims",
+      tags:      ["Experiment Design", "Financial Modelling", "Causal Inference"],
+      desc:      "Independently designed the experiment framework, built financial impact models, and presented trade-off analysis to leadership for removing photo evidence from Missing Item claims — a major policy overhaul.",
+      metric:    "£2.9M",
+      metricSub: "projected annual gross compensation impact",
+      caseStudy: "",
+      github:    "",
     },
     {
-      title:     "LLM Evaluation Harness",
-      tags:      ["LLM", "Python", "Evaluation"],
-      desc:      "Built an end-to-end evaluation suite for comparing LLM-powered response suggestions in the support tool — covering factual accuracy, tone, and length across 10k sample conversations.",
-      metric:    "3× faster eval cycles",
-      metricSub: "from 3 days to &lt;1 day per model version",
-      caseStudy: "projects/llm-eval.html",
-      github:    "", /* TODO */
+      title:     "LLM-Estimated Item Value Compensation",
+      tags:      ["LLM", "Measurement", "ROI Analysis"],
+      desc:      "Led end-to-end measurement for replacing flat-rate compensation with LLM-estimated item values. Quantified GTV uplift, contact reduction, and ROI — analysis that directly drove the go/no-go decision.",
+      metric:    "2.88× ROI",
+      metricSub: "£2.1M GTV uplift · 10.2% fewer support contacts",
+      caseStudy: "",
+      github:    "",
     },
     {
-      title:     "A/B Experiment Toolkit",
-      tags:      ["Experiment Design", "Stats", "SQL"],
-      desc:      "Reusable SQL + Python toolkit for pre-experiment power calculations, CUPED variance reduction, and post-hoc novelty-effect correction. Adopted by 4 teams at Deliveroo.",
-      metric:    "MDE −25%",
-      metricSub: "at same sample size via CUPED",
-      caseStudy: "projects/ab-toolkit.html",
-      github:    "", /* TODO */
+      title:     "LLM Validation Rules for Claim Combinations",
+      tags:      ["LLM", "Cost Savings", "Care Analytics"],
+      desc:      "Drove analytics for LLM-based rules preventing illogical claim combinations — sized annual cost savings and claim rate reduction with no CSAT degradation.",
+      metric:    "£283K",
+      metricSub: "annual cost savings · −1.68ppt claim rate",
+      caseStudy: "",
+      github:    "",
     },
     {
-      title:     "Player LTV Segmentation",
-      tags:      ["Gaming", "ML", "Clustering"],
-      desc:      "k-means + survival analysis hybrid for segmenting mobile game players into spend tiers. Outputs drove UA channel allocation and pushed D30 ROAS up meaningfully.",
-      metric:    "+14% D30 ROAS",
-      metricSub: "on reallocated UA spend",
-      caseStudy: "", /* TODO: Add case study page if desired */
-      github:    "", /* TODO */
+      title:     "Experimentation Platform Standardisation",
+      tags:      ["Experiment Strategy", "KPI Frameworks", "Analytics Infra"],
+      desc:      "Defined and standardised key experimentation platform metrics across Deliveroo's Care organisation — enabling consistent measurement and faster experiment cycles across all lines of business.",
+      metric:    "Org-wide",
+      metricSub: "adopted across all Care lines of business",
+      caseStudy: "",
+      github:    "",
     },
     {
-      title:     "Geo-Lift Measurement with RDD",
-      tags:      ["Causal Inference", "RDD", "Geo Analytics"],
-      desc:      "Applied Regression Discontinuity Design to evaluate a city-level promotion rollout, surfacing ~8% over-attribution in prior synthetic-control estimates.",
-      metric:    "−8% over-attribution",
-      metricSub: "corrected vs. prior method",
-      caseStudy: "", /* TODO */
-      github:    "", /* TODO */
+      title:     "High-Value Player Prediction Framework",
+      tags:      ["ML", "Classification", "Gaming"],
+      desc:      "Built an early-behaviour-based framework at Junglee Games to predict high-value players and support targeted engagement strategies — improving retention by 3%.",
+      metric:    "+3% retention",
+      metricSub: "from targeted engagement on predicted HVPs",
+      caseStudy: "",
+      github:    "",
     },
-    /* TODO: Add more projects in the same format */
+    {
+      title:     "Subscription Segmentation & Demand Forecasting",
+      tags:      ["RFM Analysis", "Forecasting", "PySpark"],
+      desc:      "Identified high-potential subscription segments at Rapido using RFM analysis and geo-temporal profiling, and built automated demand forecasts with Spark + Airflow for operational planning.",
+      metric:    "Automated",
+      metricSub: "KPI tracking replacing manual reporting",
+      caseStudy: "",
+      github:    "",
+    },
   ],
 
   /* ── Skills ── */
   skills: [
     {
-      group: "Analytics & Stats",
-      items: ["Causal Inference", "A/B Experiment Design", "DiD", "RDD", "Power Analysis", "CUPED", "Bayesian A/B", "Survival Analysis", "Regression Modelling"]
+      group: "Analytics Leadership",
+      items: ["KPI Framework Design", "Experiment Strategy & Governance", "Financial Impact Sizing", "Stakeholder Influence", "Cross-functional Partnership"]
     },
     {
-      group: "Machine Learning",
-      items: ["XGBoost / LightGBM", "k-Means Clustering", "NLP / Text Analytics", "LLM Evaluation", "Feature Engineering", "scikit-learn"]
+      group: "Methods",
+      items: ["A/B Testing & Experimentation", "Causal Inference (DiD, Quasi-experiments)", "Statistical Modelling", "Segmentation & RFM", "Root Cause Analysis", "Forecasting"]
     },
     {
       group: "Programming",
-      items: ["Python (pandas, numpy, scipy)", "SQL (BigQuery, Redshift, dbt)", "R", "Spark (PySpark)"]
+      items: ["Python (Pandas, Scikit-learn, Matplotlib)", "SQL (PostgreSQL, Presto, Snowflake, MySQL)", "PySpark"]
     },
     {
       group: "Data Tools",
-      items: ["Looker / Looker Studio", "Tableau", "Airflow", "dbt", "Jupyter", "Git"]
+      items: ["Looker", "Tableau", "Metabase", "AWS Athena", "Airflow", "dbt", "ETL Pipelines", "Event Instrumentation"]
     },
     {
-      group: "Domain Knowledge",
-      items: ["Marketplace Analytics", "Care & Support Ops", "Mobile Gaming", "Mobility / Ride-hailing", "Growth / Retention"]
+      group: "AI & Productivity",
+      items: ["LLM-based Operational Systems", "LLM Evaluation", "Claude", "Cursor", "GitHub Copilot"]
     },
     {
-      group: "Studying Now",
-      items: ["Deep Learning (BITS Pilani)", "Transformers", "MLOps", "Reinforcement Learning basics"]
+      group: "Currently Studying",
+      items: ["MTech AI/ML — BITS Pilani", "Generative AI with LLMs (AWS/Coursera)", "Mathematics for ML (DeepLearning.ai)", "Spark & PySpark (Udemy)"]
     },
   ],
 
   /* ── Blog / Writing ─────────────────────────────────────────
-     `slug` must match the filename in /blog/ (without .html)
-     Leave `slug` empty to disable the link.
+     `slug` must match the filename in /blog/ (without .html).
+     Leave `slug` empty to disable the link until post is written.
   ────────────────────────────────────────────────────────── */
   posts: [
     {
-      title:   "Why Most A/B Tests at Scale Fail Silently",
-      date:    "2025-04-12",
-      tags:    ["Experimentation", "Stats"],
-      excerpt: "Network effects, novelty bias, and survivor-selected metrics are quietly ruining your p-values — and most teams have no idea.",
+      title:    "Why Most A/B Tests at Scale Fail Silently",
+      date:     "2025-04-12",
+      tags:     ["Experimentation", "Stats"],
+      excerpt:  "Network effects, novelty bias, and survivor-selected metrics are quietly ruining your p-values — and most teams have no idea.",
       readTime: "7 min",
-      slug:    "", /* TODO: Create blog/why-ab-tests-fail.html and add slug */
+      slug:     "", /* TODO: create blog/why-ab-tests-fail.html */
     },
     {
-      title:   "CUPED in Plain English",
-      date:    "2025-02-28",
-      tags:    ["Experimentation", "Variance Reduction"],
-      excerpt: "A no-nonsense walkthrough of Controlled-experiment Using Pre-Experiment Data, with worked examples in Python.",
+      title:    "CUPED in Plain English",
+      date:     "2025-02-28",
+      tags:     ["Experimentation", "Variance Reduction"],
+      excerpt:  "A no-nonsense walkthrough of Controlled-experiment Using Pre-Experiment Data, with worked Python examples.",
       readTime: "9 min",
-      slug:    "", /* TODO */
+      slug:     "", /* TODO */
     },
     {
-      title:   "How I'm Using LLMs to Speed Up Exploratory Analysis",
-      date:    "2024-12-05",
-      tags:    ["LLM", "Workflow"],
-      excerpt: "Not code generation — but structured reasoning scaffolds, eval frameworks, and where the hype is genuinely ahead of the tooling.",
+      title:    "How I'm Using LLMs to Accelerate Analysis — Without the Hype",
+      date:     "2024-12-05",
+      tags:     ["LLM", "Workflow"],
+      excerpt:  "Not code generation — structured reasoning scaffolds, eval frameworks, and an honest take on where the tooling is genuinely ahead of the workflows.",
       readTime: "6 min",
-      slug:    "", /* TODO */
+      slug:     "", /* TODO */
     },
-    /* TODO: Add more posts */
   ],
 
 };
