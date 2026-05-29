@@ -140,10 +140,8 @@ ul { list-style: none; }
   height: 44px;
   width: auto;
   display: inline-block;
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   object-fit: contain;
-  /* logo has dark bg — light ring makes it readable on dark footer */
-  box-shadow: 0 0 0 2px rgba(255,255,255,.12);
 }
 
 .nav-links {
