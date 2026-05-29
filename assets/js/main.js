@@ -177,6 +177,53 @@ const CONFIG = {
     },
   ],
 
+  /* ── Certifications / Upskilling ───────────────────────────
+     `credential` is the URL to the certificate (Coursera, etc.)
+     Leave `credential` empty if you don't have a public link yet.
+  ────────────────────────────────────────────────────────── */
+  certifications: [
+    {
+      title:    "Generative AI with Large Language Models",
+      issuer:   "AWS & DeepLearning.ai",
+      platform: "Coursera",
+      year:     "2024",
+      tags:     ["LLM", "Generative AI"],
+      credential: "", /* TODO: Add Coursera certificate URL */
+    },
+    {
+      title:    "Mathematics for Machine Learning & Data Science",
+      issuer:   "DeepLearning.ai",
+      platform: "Coursera",
+      year:     "2024",
+      tags:     ["ML Fundamentals", "Linear Algebra", "Statistics"],
+      credential: "", /* TODO */
+    },
+    {
+      title:    "Structuring Machine Learning Projects",
+      issuer:   "DeepLearning.ai",
+      platform: "Coursera",
+      year:     "2023",
+      tags:     ["ML Strategy", "MLOps"],
+      credential: "", /* TODO */
+    },
+    {
+      title:    "Prediction Models with Sports Data",
+      issuer:   "Coursera",
+      platform: "Coursera",
+      year:     "2023",
+      tags:     ["Predictive Modelling", "Applied ML"],
+      credential: "", /* TODO */
+    },
+    {
+      title:    "Spark and Python for Big Data with PySpark",
+      issuer:   "Udemy",
+      platform: "Udemy",
+      year:     "2022",
+      tags:     ["PySpark", "Big Data", "Data Engineering"],
+      credential: "", /* TODO */
+    },
+  ],
+
   /* ── Blog / Writing ─────────────────────────────────────────
      `slug` must match the filename in /blog/ (without .html).
      Leave `slug` empty to disable the link until post is written.
@@ -333,6 +380,31 @@ function renderWriting() {
   }).join('');
 }
 
+/* ── Certifications ── */
+function renderCertifications() {
+  const el = document.getElementById('certs-grid');
+  if (!el) return;
+  el.innerHTML = CONFIG.certifications.map((c, i) => `
+    <div class="cert-card reveal reveal-delay-${(i % 3) + 1}">
+      <div class="cert-card-top">
+        <div class="cert-platform-badge">${c.platform}</div>
+        <div class="cert-year">${c.year}</div>
+      </div>
+      <div class="cert-title">${c.title}</div>
+      <div class="cert-issuer">${c.issuer}</div>
+      <div class="cert-tags">
+        ${c.tags.map(t => `<span class="tag tag--neutral">${t}</span>`).join('')}
+      </div>
+      ${c.credential ? `
+        <a href="${c.credential}" target="_blank" rel="noopener" class="cert-link">
+          View certificate
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      ` : `<span class="cert-link cert-link--soon">Certificate coming</span>`}
+    </div>
+  `).join('');
+}
+
 /* ── Contact links ── */
 function renderContact() {
   document.getElementById('contact-email-link').href = `mailto:${CONFIG.email}`;
@@ -444,6 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderExperience();
   renderProjects();
   renderSkills();
+  renderCertifications();
   renderWriting();
   renderContact();
 
