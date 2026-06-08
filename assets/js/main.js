@@ -175,6 +175,33 @@ const CONFIG = {
       caseStudy: "",
       github:    "https://github.com/sanketneuralforge/vibe-architect",
     },
+    {
+      title:     "Analyst Assistant",
+      tags:      ["AI Agent", "FastAPI", "Streamlit", "ChromaDB"],
+      desc:      "A stateful AI thought partner for data investigation work. Unlike one-shot chat tools, it holds an analytical session in memory across five modes: generating hypotheses, drafting investigation code, synthesising documents, stress-testing conclusions, and writing stakeholder narratives. When you run the stress tester in Mode 4, it challenges conclusions by name using evidence collected three modes earlier, without being told any of it again.",
+      metric:    "5 analytical modes",
+      metricSub: "session memory across every step",
+      caseStudy: "",
+      github:    "https://github.com/sanketneuralforge/AI-analyst-assistant",
+    },
+    {
+      title:     "Metric Watchdog",
+      tags:      ["AI Agent", "Claude", "Dashboard Intelligence"],
+      desc:      "Feed it a dashboard screenshot and a Postgres schema and it figures out what is wrong on its own. A chain of agents reads the visual, reasons about the metrics, diagnoses likely root causes, and writes a plain-language briefing that gets sent to email or Slack. Built to replace the part of on-call work that is mostly pattern recognition on charts.",
+      metric:    "Screenshot in",
+      metricSub: "diagnosis and narrative out",
+      caseStudy: "",
+      github:    "https://github.com/sanketneuralforge/metric-watchdog",
+    },
+    {
+      title:     "Health RAG Pipeline",
+      tags:      ["RAG", "Biomedical", "Multimodal", "Python"],
+      desc:      "A hybrid retrieval system for pharma and healthcare research, built for an MTech assignment. It starts with classical BM25 retrieval, layers in dense semantic search, adds a two-stage re-ranker, and finishes with multimodal retrieval across chest X-ray images. Each stage is implemented from scratch to understand where and why retrieval breaks down.",
+      metric:    "4 retrieval stages",
+      metricSub: "BM25 to multimodal with X-ray images",
+      caseStudy: "",
+      github:    "",
+    },
   ],
 
   /* ── Skills ── */
