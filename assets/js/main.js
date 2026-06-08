@@ -148,6 +148,33 @@ const CONFIG = {
       caseStudy: "",
       github:    "",
     },
+    {
+      title:     "Epistemic Auditor",
+      tags:      ["Multi-agent", "RAG", "Python", "Claude"],
+      desc:      "A multi-agent system built to investigate viral claims and misinformation. It breaks a claim into sub-claims, traces where each one originated, figures out why people believe it, and writes a counter-narrative grounded in psychology. Built across 10 stages, each introducing one real production concept: memory stores, semantic cache, parallel orchestration, ChromaDB RAG, HITL gates, and live observability.",
+      metric:    "10 production stages",
+      metricSub: "RAG, HITL, semantic cache, observability",
+      caseStudy: "",
+      github:    "https://github.com/sanketneuralforge/epistemic-auditor",
+    },
+    {
+      title:     "Bank Statement Analyzer",
+      tags:      ["Local LLM", "Python CLI", "Privacy-first"],
+      desc:      "A local CLI tool that reads a bank statement CSV, categorises every transaction, flags anything that looks off, writes a monthly summary, and saves the whole thing as an HTML report. Everything runs on your machine via Ollama. Nothing goes to the cloud.",
+      metric:    "100% on-device",
+      metricSub: "zero data sent to the cloud",
+      caseStudy: "",
+      github:    "https://github.com/sanketneuralforge/bank-statement-analyzer",
+    },
+    {
+      title:     "Vibe Architect",
+      tags:      ["AI Agent", "Claude", "Multi-sensory"],
+      desc:      "You give it a feeling or a moment, it gives you a playlist, a colour palette, film recommendations, and a short original poem that all belong to the same emotional world. Built as a single agent with structured tool use, it was an experiment in whether an LLM can hold a consistent aesthetic across very different output formats.",
+      metric:    "1 prompt, 4 outputs",
+      metricSub: "playlist, palette, films, poem",
+      caseStudy: "",
+      github:    "https://github.com/sanketneuralforge/vibe-architect",
+    },
   ],
 
   /* ── Skills ── */
