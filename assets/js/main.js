@@ -11,7 +11,7 @@ const CONFIG = {
   /* ── Personal info ── */
   name: "Sanket",
   brand: "SanketNeuralForge",
-  role: "Analytics Leader and Data Scientist",
+  role: "Analytics and Data Science Professional",
   location: "Bengaluru, India",
   email: "sanketsrp176.sp@gmail.com",
   linkedin: "https://www.linkedin.com/in/sanket-panchalwar/", /* TODO: confirm handle */
